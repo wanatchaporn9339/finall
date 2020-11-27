@@ -10,7 +10,7 @@ if (mysqli_connect_errno($conn))
 
 $h = $_POST['height'];
 $w = $_POST['weight'];
-$bmi = $w / $w*2;
+$bmi = $w / ($w*2);
 
 $sql = "INSERT INTO bmi (height , weight , bmi) VALUES ('$h', '$w', '$bmi')";
 
