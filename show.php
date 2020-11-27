@@ -18,7 +18,7 @@ if (mysqli_connect_errno($conn))
 {
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
-$res = mysqli_query($conn, 'SELECT * FROM exlat');
+$res = mysqli_query($conn, 'SELECT * FROM bmi');
 ?>
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
@@ -50,9 +50,9 @@ $res = mysqli_query($conn, 'SELECT * FROM exlat');
 <table class="table table-bordered">
   <thead>
     <tr class="alert alert-warning">
-      <th> <div align="center">A</div></th>
-      <th> <div align="center">B </div></th>
-      <th> <div align="center">C </div></th>
+      <th> <div align="center">name</div></th>
+      <th> <div align="center">height </div></th>
+      <th> <div align="center">weight </div></th>
     </tr>
   </thead>
   
@@ -60,9 +60,9 @@ $res = mysqli_query($conn, 'SELECT * FROM exlat');
 <?php while($Result = mysqli_fetch_array($res))
 {?>
     <tr>
-      <td><?php echo $Result['A'];?></td>
-      <td><?php echo $Result['B'];?></td>
-      <td><?php echo $Result['C'];?></td>
+      <td><?php echo $Result['name'];?></td>
+      <td><?php echo $Result['height'];?></td>
+      <td><?php echo $Result['weight'];?></td>
     </tr>
 <?php
 }
