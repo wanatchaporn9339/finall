@@ -12,7 +12,7 @@ $A = $_POST['A'];
 $B = $_POST['B'];
 $C = $A + $B;
 
-$sql = "INSERT INTO exlap (A , B , C) VALUES ('$A', '$B', '$C')";
+$sql = "INSERT INTO exlat (A , B , C) VALUES ('$A', '$B', '$C')";
 
 if (mysqli_query($conn, $sql)) {
   
