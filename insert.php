@@ -3,6 +3,6 @@
 
 $A = $_POST['A'];
 $B = $_POST['B'];
-$C = $A + $;
+$C = $A + $B;
 echo $C;
 ?>
