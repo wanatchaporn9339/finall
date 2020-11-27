@@ -8,11 +8,11 @@ if (mysqli_connect_errno($conn))
 }
 
 
-$A = $_POST['A'];
-$B = $_POST['B'];
-$C = $A + $B;
+$h = $_POST['height'];
+$w = $_POST['weight'];
+$bmi = $w / $w*2;
 
-$sql = "INSERT INTO exlat (A , B , C) VALUES ('$A', '$B', '$C')";
+$sql = "INSERT INTO bmi (height , weight , bmi) VALUES ('$h', '$w', '$bmi')";
 
 if (mysqli_query($conn, $sql)) {
   
