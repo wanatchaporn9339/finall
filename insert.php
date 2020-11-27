@@ -10,7 +10,7 @@ if (mysqli_connect_errno($conn))
 
 $h = $_POST['height'];
 $w = $_POST['weight'];
-$bmi = $w / ($w*2);
+$bmi= ($weight)/(($height/100)*($height/100));
 
 $sql = "UPDATE bmi SET height='$h' , weight='$w' , bmi='$w' name='name' WHERE id='$id';
 
