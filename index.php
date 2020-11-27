@@ -9,7 +9,7 @@
 
 <body>
     <?php
-    require('connect.php');
+    require('insert.php');
     $res = mysqli_query($conn, 'SELECT * FROM bmi');
     ?>
     <br>
