@@ -12,9 +12,10 @@ $h = $_POST['height'];
 $w = $_POST['weight'];
 $bmi = $w / ($w*2);
 
-$sql = "INSERT INTO bmi (height , weight , bmi) VALUES ('$h', '$w', '$bmi')";
+$sql = "UPDATE bmi SET height='$h' , weight='$w' , bmi='$w' name='name' WHERE id='$id';
 
 if (mysqli_query($conn, $sql)) {
+header("location:show.php");
   
 } else {
   echo "Error: " . $sql . "<br>" . mysqli_error($conn);
