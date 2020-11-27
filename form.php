@@ -6,7 +6,7 @@
     </head>
 
     <body>
-        <div class="container" style="background-color: bisque; height: 350px; margin: 100; padding: 20;">
+        <div class="container" style="background-color: bisque; height: 400px; margin: 100; padding: 20;">
             <h1>lab_itf</h1>
             <form action="insert.php" method="POST">
                 <div class="form-group">
