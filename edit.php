@@ -8,8 +8,9 @@ if (mysqli_connect_errno($conn))
 
 $id=$_REQUEST['id'];
 $name=$_REQUEST['name'];
-$comment=$_REQUEST['comment'];
-$link=$_REQUEST['link'];
+$weight=$_REQUEST['weight'];
+$height=$_REQUEST['height'];
+$bmi=$_REQUEST['bmi'];
 
 
 
@@ -32,7 +33,7 @@ $conn->close();
         
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div class="container">
-              <a class="navbar-brand" href="show.php">Start Bootstrap</a>
+              <a class="nav-link" href="show.php">Start Bootstrap</a>
               <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 Menu
                 <i class="fas fa-bars"></i>
@@ -64,12 +65,12 @@ $conn->close();
                   <input type="text" class="form-control" name = "name" id="idName" placeholder="Enter name" value=<?php echo $name;?>>
                 </div>
                 <div class="form-group">
-                  <label for="commmant">Comment</label>
+                  <label for="weight">Weight</label>
                   <textarea class="form-control" name = "comment" id="idComment" placeholder="Enter Comment" rows="3"><?php echo $comment;?></textarea>
                 </div>
                 <div class="form-group">
-                    <label for="Link">Link</label>
-                    <input type="text" class="form-control" name = "link" id="idLink" placeholder="Enter Link" value=<?php echo $link;?>>
+                    <label for="height">Height</label>
+                    <input type="float" step="0.01" required class="form-control" name = "link" id="idLink" placeholder="Enter Link" value=<?php echo $link;?>>
                   </div>
                 <button type="submit" class="btn btn-primary mb-2">Confirm</button>
               </form>
